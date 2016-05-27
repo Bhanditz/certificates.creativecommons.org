@@ -1,0 +1,35 @@
+{
+  "name": "creativecommons/certificates.creativecommons.org",
+  "description": "Package to build certificates.creativecommons.org",
+  "authors": [
+    {
+      "name": "Rob Myers",
+      "email": "rob@robmyers.org"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "wordpress/wordpress",
+        "type": "webroot",
+        "version": "4.5.2",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/WordPress/WordPress.git",
+          "reference": "4.5.2"
+        },
+        "require": {
+          "fancyguy/webroot-installer": "1.0.0"
+        }
+      }
+    }
+  ],
+  "require": {
+    "wordpress/wordpress": "4.5.*"
+  },
+  "extra": {
+    "webroot-dir": "content",
+    "webroot-package": "wordpress/wordpress"
+  }
+}
